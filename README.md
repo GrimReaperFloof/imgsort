@@ -8,7 +8,7 @@ Syntax:
 where `./imgsort` is the executable, and `input-image` is an existing image file with extension, and `output-image` is the output image file with extension.
 
 ## Dependencies
-* OpenCV 3.2 (`sudo apt install libopencv-dev`)
+* OpenCV 3.2 (`sudo apt install libopencv-dev` for Ubuntu)
 * ~~Your hands (probably)~~
 
 You're probably able to use a newer version though.
