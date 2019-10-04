@@ -48,5 +48,7 @@ output = Image.fromarray(modified_input)
 output.save(sys.argv[2])
 ```
 arguments are the same as in the C++ imgsort.
+
 Just run the python file via a terminal or command prompt using similar arguments as you would with the C++ imgsort.
+
 Example: `python3 pyimgsort.py input.png output.png` for Linux, `py pyimgsort.py input.png output.png` for Windows
