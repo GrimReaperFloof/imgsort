@@ -35,7 +35,7 @@ Oh and sorry for the 2 functions, `cv::Vec` only accepts const values as templat
 
 ## Python remake
 I was able to achieve the same thing in Python.
-Just install numpy and Pillow via pip.
+Just install `numpy` and `Pillow` via pip.
 Put the following code in a Python file.
 ```python
 from PIL import Image
