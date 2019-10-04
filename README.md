@@ -32,3 +32,21 @@ g++ -o "imgsort" ./src/imgsort.cpp -I/usr/include -lopencv_core -lopencv_highgui
 And of course, if you want that extra thicc performance, add `-O3` at the end.
 
 Oh and sorry for the 2 functions, `cv::Vec` only accepts const values as template arguments for some reason.
+
+## Python remake
+I was able to achieve the same thing in Python.
+Just install numpy and Pillow via pip.
+Put the following code in a Python file.
+```
+from PIL import Image
+import numpy as np
+import sys
+
+input = np.array(Image.open(sys.argv[1]))
+modified_input = np.sort(input, axis=1)
+output = Image.fromarray(modified_input)
+output.save(sys.argv[2])
+```
+arguments are the same as in the C++ imgsort.
+Just run the python file via a terminal or command prompt using similar arguments as you would with the C++ imgsort.
+Example: `python3 pyimgsort.py input.png output.png` for Linux, `py pyimgsort.py input.png output.png` for Windows
