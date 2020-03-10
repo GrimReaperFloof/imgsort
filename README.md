@@ -20,7 +20,7 @@ g++ -o "imgsort" ./src/imgsort.cpp -I/usr/include -lopencv_core -lopencv_highgui
 ```
 If you're not gonna debug it then add `-O3` at the end for extra thicc performance.
 
-Fun fact: it has already been built.
+~~Fun fact: it has already been built.~~ Haha no. It won't work. Blame dynamic linking. Someone should teach me how to use AppImages.
 ## Other interesting stuff that might be interesting to know about
 The commented code is for if you want to sort by VSH instead of RGB. (edit the for loop if you want to sort by HSV)
 
