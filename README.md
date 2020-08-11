@@ -8,7 +8,7 @@ Syntax:
 where `./imgsort` is the executable, and `input-image` is an existing image file with extension, and `output-image` is the output image file with extension.
 
 ## Dependencies
-* OpenCV (`sudo apt install libopencv-dev` for Ubuntu. `sudo pacman -S opencv4` for Arch Linux.)
+* OpenCV (`sudo apt install libopencv-dev` for Ubuntu. `sudo pacman -S opencv` for Arch Linux.)
 * ~~Your hands (probably)~~
 
 ## Building (on Linux)
