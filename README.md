@@ -12,7 +12,7 @@ where `./imgsort` is the executable, and `input-image` is an existing image file
 * ~~Your hands (probably)~~
 
 ## Building (on Linux)
-I made this thing in Eclipse, but if you want to compile it from the command line you can do this from within the project folder:
+I made this thing in Eclipse, but if you want to compile it from the command line you can do this from within the project folder:  
 On Ubuntu systems, you can compile using the following command:
 ```
 g++ -o "imgsort" ./src/imgsort.cpp -I/usr/include -lopencv_core -lopencv_highgui -lopencv_imgcodecs -O3
@@ -26,7 +26,7 @@ g++ -o "imgsort" ./src/imgsort.cpp -I/usr/include/opencv4 -lopencv_core -lopencv
 The commented code is for if you want to sort by VSH instead of RGB. (edit the for loop if you want to sort by HSV)
 
 If you uncomment the code don't forget to compile with extra library: `opencv_imgproc`  
-Then you'd have to compile like this (if you're on command line on Linux):
+Then you'd have to compile like this (if you're on command line on Linux):  
 Ubuntu:
 ```
 g++ -o "imgsort" ./src/imgsort.cpp -I/usr/include -lopencv_core -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc -O3
