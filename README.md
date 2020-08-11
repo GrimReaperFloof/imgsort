@@ -8,33 +8,36 @@ Syntax:
 where `./imgsort` is the executable, and `input-image` is an existing image file with extension, and `output-image` is the output image file with extension.
 
 ## Dependencies
-* OpenCV 3.2 (`sudo apt install libopencv-dev` for Ubuntu)
+* OpenCV (`sudo apt install libopencv-dev` for Ubuntu. `sudo pacman -S opencv4` for Arch Linux.)
 * ~~Your hands (probably)~~
-
-You're probably able to use a newer version though.
 
 ## Building (on Linux)
 I made this thing in Eclipse, but if you want to compile it from the command line you can do this from within the project folder:
+On Ubuntu systems, you can compile using the following command:
 ```
-g++ -o "imgsort" ./src/imgsort.cpp -I/usr/include -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+g++ -o "imgsort" ./src/imgsort.cpp -I/usr/include -lopencv_core -lopencv_highgui -lopencv_imgcodecs -O3
 ```
-If you're not gonna debug it then add `-O3` at the end for extra thicc performance.
+On Arch Linux systems, you can compile using the following command:
+```
+g++ -o "imgsort" ./src/imgsort.cpp -I/usr/include/opencv4 -lopencv_core -lopencv_highgui -lopencv_imgcodecs -O3
+```
 
-~~Fun fact: it has already been built.~~ Haha no. It won't work. Blame dynamic linking. Someone should teach me how to use AppImages.
 ## Other interesting stuff that might be interesting to know about
 The commented code is for if you want to sort by VSH instead of RGB. (edit the for loop if you want to sort by HSV)
 
 If you uncomment the code don't forget to compile with extra library: `opencv_imgproc`  
 Then you'd have to compile like this (if you're on command line on Linux):
+Ubuntu:
 ```
-g++ -o "imgsort" ./src/imgsort.cpp -I/usr/include -lopencv_core -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc
+g++ -o "imgsort" ./src/imgsort.cpp -I/usr/include -lopencv_core -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc -O3
 ```
-And of course, if you want that extra thicc performance, add `-O3` at the end.
-
-Oh and sorry for the 2 functions, `cv::Vec` only accepts const values as template arguments for some reason.
+Arch Linux:
+```
+g++ -o "imgsort" ./src/imgsort.cpp -I/usr/include/opencv4 -lopencv_core -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc -O3
+```
 
 ## Python remake
-I was able to achieve the same thing in Python.
+I was able to achieve a similar thing in Python. The results are slightly different to what you will get from C++ imgsort, though.
 Just install `numpy` and `Pillow` via pip.
 Put the following code in a Python file.
 ```python
