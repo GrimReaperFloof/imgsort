@@ -8,9 +8,9 @@ void SortImage(cv::Mat &I)
 {
 	using VecType = cv::Vec<uchar, Channels>;
 
+	VecType *pixelsInRow = new VecType[I.cols];
 	for(int row = 0; row < I.rows; ++row)
 	{
-		VecType *pixelsInRow = new VecType[I.cols];
 		for(int col = 0; col < I.cols; ++col)
 		{
 			pixelsInRow[col] = I.at<VecType>(row, col);
@@ -27,8 +27,8 @@ void SortImage(cv::Mat &I)
 		{
 			I.at<VecType>(row, col) = pixelsInRow[col];
 		}
-		delete[] pixelsInRow;
 	}
+	delete[] pixelsInRow;
 }
 
 int main(int argc, char* argv[])
